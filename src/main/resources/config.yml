@@ -1,0 +1,60 @@
+enable: true
+prefix: "&6[Spect&f+&6] &r"
+start-message: "&aThe Plugin Spect+ is enable!"
+close-message: "&aThe Plugin Spect+ is disable!"
+configUpdate: "&aThe config was updated!"
+
+Management:
+  gamemode: 1 <---- Default gamemode while players is in spectator mode.
+  spectators_view: true <---- Players in spectator mode can see each other.
+  #For this to work, you need to implement it in your game's plugin :
+  game:
+    world: "world"
+    X: 0.0
+    Y: 90.0
+    Z: 0.0
+
+error:
+  onlyPlayer: "&cOnly player can execute it."
+  notPermission: "&cYou have not the permission."
+  alreadyOff: "&cError: This command is already disable."
+  alreadyOn: "&cError: This command is already enable."
+
+commands:
+  spectator:
+    enable: true
+    syntax: "&cSyntax: /spectator (on/off)"
+    permission: "spectplus.commands.spectator"
+
+hotbar:
+  replay:
+    name: "&eReplay"
+    lore: "&7Replay a game!"
+    material: NETHER_STAR
+    slot: 1
+    authorize: true <---- item using or not.
+
+  players_list:
+    name: "&3Player List"
+    lore: "&7See who play!"
+    material: PLAYER_HEAD
+    slot: 4
+    authorize: true <---- item using or not.
+    invname: "&8Players List" <---- Inventory's title
+
+  phantom:
+    name: "&6Phantom Mode"
+    lore: "&7Be more in spectator mode!"
+    material: CLOCK
+    slot: 6
+    authorize: true <---- item using or not.
+    timer: 5 <---- in seconds
+
+  random_teleport:
+    name: "&8Random Teleportation"
+    lore: "&7Teleport you on any player!"
+    material: COMPASS
+    slot: 9
+    authorize: true <---- item using or not.
+    none: "&cThere are not players to teleport to."
+
